@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace NIBM_FINAL_PROJECT
 {
@@ -15,10 +17,16 @@ namespace NIBM_FINAL_PROJECT
     {
         SqlConnection con;
         SqlCommand cmd;
-        String userId;
+        String userId = "";
+        String name = "";
         public Login()
         {
             InitializeComponent();
+        }
+
+        public static bool IsNullOrEmpty(List<String> list)
+        {
+            return (list == null || list.Any());
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -38,15 +46,27 @@ namespace NIBM_FINAL_PROJECT
                 con.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    List<string> list = (from IDataRecord r in reader
+                                         select (string)r["UserName Password Invalid"]
+                    ).ToList();
+                    if (reader.Read())
                     {
-                        userId = reader[0].ToString();
-                        MessageBox.Show("Login Succesfully");
-                        con.Close();
-                        this.Hide();
-                        new Form1(userId, userName).Show();
-                        return;
+                        while (reader.Read())
+                        {
+                            MessageBox.Show("Login Succesfully");
+                            this.Hide();
+                            new Form1(userId, name).Show();
+                            return;
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("UserName Password Invalid");
+                        this.Hide();
+                        new Form1(null, null).Show();
+                    }
+                   
+                    con.Close();
                 }
             }
             catch (Exception ex)

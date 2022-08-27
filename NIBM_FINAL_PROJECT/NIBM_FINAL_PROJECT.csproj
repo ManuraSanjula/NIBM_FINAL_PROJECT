@@ -64,11 +64,11 @@
     <Compile Include="DeleteFoods.Designer.cs">
       <DependentUpon>DeleteFoods.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteHealthRecords.cs">
+    <Compile Include="DeleteUserHealthInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteHealthRecords.Designer.cs">
-      <DependentUpon>DeleteHealthRecords.cs</DependentUpon>
+    <Compile Include="DeleteUserHealthInfo.Designer.cs">
+      <DependentUpon>DeleteUserHealthInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="FindsFood.cs">
       <SubType>Form</SubType>
@@ -116,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="AddHealthInformation.resx">
       <DependentUpon>AddHealthInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUserHealthInfo.resx">
+      <DependentUpon>DeleteUserHealthInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

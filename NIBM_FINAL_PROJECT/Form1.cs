@@ -54,7 +54,10 @@ namespace NIBM_FINAL_PROJECT
 
         private void DeleteHealthRecords_Click(object sender, EventArgs e)
         {
-            new DeleteFoods().Show();
+            if (id == null)
+                MessageBox.Show("Please Loging To System");
+            else
+                new DeleteUserHealthInfo(id).Show();
         }
 
         private void GetHealthInfo_Click(object sender, EventArgs e)
