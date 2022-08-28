@@ -42,21 +42,28 @@ namespace NIBM_FINAL_PROJECT
                
             try
             {
-                cmd = new SqlCommand("select * from Person where UserName = '"+userName+"'", con);
+                cmd = new SqlCommand("select * from Person where UserName = '"+userName+ "'", con);
                 con.Open();
+
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    List<string> list = (from IDataRecord r in reader
+                    /*List<string> list = (from IDataRecord r in reader
                                          select (string)r["UserName Password Invalid"]
-                    ).ToList();
+                    ).ToList();*/
                     if (reader.Read())
                     {
-                        while (reader.Read())
+                        if(password == reader[2].ToString())
                         {
-                            MessageBox.Show("Login Succesfully");
-                            this.Hide();
+                            userId = reader[0].ToString();
+                            name = reader[1].ToString();
                             new Form1(userId, name).Show();
-                            return;
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("UserName Password Invalid");
+                            this.Hide();
+                            new Form1(null, null).Show();
                         }
                     }
                     else

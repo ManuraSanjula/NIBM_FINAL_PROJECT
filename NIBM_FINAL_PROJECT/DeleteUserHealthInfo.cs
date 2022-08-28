@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace NIBM_FINAL_PROJECT
 {
     public partial class DeleteUserHealthInfo : Form
@@ -36,12 +35,19 @@ namespace NIBM_FINAL_PROJECT
             {
                 con.Open();
                 myreader = cmd.ExecuteReader();
-                MessageBox.Show("successfully data Deleted", "user information");
-                while (myreader.Read())
+
+                if (myreader.Read())
                 {
+                    MessageBox.Show("Successfully data Deleted", "user information");
+                    this.Hide();
+                    con.Close();
                 }
-                con.Close();
-                this.Hide();
+                else
+                {
+                    MessageBox.Show("Given Data not in the database");
+                    this.Hide();
+                    con.Close();
+                }
             }
             catch (Exception ec)
             {

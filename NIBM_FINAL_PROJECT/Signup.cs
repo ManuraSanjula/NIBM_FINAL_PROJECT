@@ -50,7 +50,7 @@ namespace NIBM_FINAL_PROJECT
                 }
                     
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error Occur");
             }

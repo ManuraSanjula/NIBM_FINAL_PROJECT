@@ -79,6 +79,7 @@
             resources.ApplyResources(this.AddFood, "AddFood");
             this.AddFood.Name = "AddFood";
             this.AddFood.UseVisualStyleBackColor = false;
+            this.AddFood.Click += new System.EventHandler(this.AddFood_Click);
             // 
             // AddHealthInformation
             // 
@@ -94,6 +95,7 @@
             resources.ApplyResources(this.FindsFood, "FindsFood");
             this.FindsFood.Name = "FindsFood";
             this.FindsFood.UseVisualStyleBackColor = false;
+            this.FindsFood.Click += new System.EventHandler(this.FindsFood_Click);
             // 
             // DeleteFoods
             // 
@@ -101,6 +103,7 @@
             resources.ApplyResources(this.DeleteFoods, "DeleteFoods");
             this.DeleteFoods.Name = "DeleteFoods";
             this.DeleteFoods.UseVisualStyleBackColor = false;
+            this.DeleteFoods.Click += new System.EventHandler(this.DeleteFoods_Click);
             // 
             // button3
             // 
@@ -115,6 +118,7 @@
             resources.ApplyResources(this.UpdateFoods, "UpdateFoods");
             this.UpdateFoods.Name = "UpdateFoods";
             this.UpdateFoods.UseVisualStyleBackColor = false;
+            this.UpdateFoods.Click += new System.EventHandler(this.UpdateFoods_Click);
             // 
             // button2
             // 

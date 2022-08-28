@@ -34,7 +34,7 @@ namespace NIBM_FINAL_PROJECT
                 con.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    if (reader.Read())
                     {
                         txt_name.Text = reader[2].ToString();
                         txt_blood_type.Text = reader[3].ToString();
@@ -47,10 +47,15 @@ namespace NIBM_FINAL_PROJECT
                         }
                         else
                             female.Checked = true;
-
+                        con.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found");
+                        con.Close();
+                        this.Hide();
                     }
                 }
-                con.Close();
             }
             catch (Exception ex)
             {

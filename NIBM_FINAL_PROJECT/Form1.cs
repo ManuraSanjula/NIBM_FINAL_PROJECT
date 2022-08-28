@@ -68,6 +68,38 @@ namespace NIBM_FINAL_PROJECT
                 new HealthDetail(id).Show();
         }
 
+        private void AddFood_Click(object sender, EventArgs e)
+        {
+            if (id == null)
+                MessageBox.Show("Please Loging To System");
+            else
+                new AddFood(id,name).Show();
+        }
+
+        private void UpdateFoods_Click(object sender, EventArgs e)
+        {
+            if (id == null)
+                MessageBox.Show("Please Loging To System");
+            else
+                new UpdateFoods().Show();
+        }
+
+        private void FindsFood_Click(object sender, EventArgs e)
+        {
+            if (id == null)
+                MessageBox.Show("Please Loging To System");
+            else
+                new FindsFood().Show();
+        }
+
+        private void DeleteFoods_Click(object sender, EventArgs e)
+        {
+            if (id == null)
+                MessageBox.Show("Please Loging To System");
+            else
+                new DeleteFoods().Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             new Signup().Show();
