@@ -67,6 +67,7 @@
             this.btn_submits.TabIndex = 30;
             this.btn_submits.Text = "Submit";
             this.btn_submits.UseVisualStyleBackColor = true;
+            this.btn_submits.Click += new System.EventHandler(this.btn_submits_Click);
             // 
             // txt_image_2
             // 
@@ -234,6 +235,7 @@
             this.Name = "UpdateFoods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateFoods";
+            this.Load += new System.EventHandler(this.UpdateFoods_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

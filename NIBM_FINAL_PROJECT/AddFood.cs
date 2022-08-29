@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace NIBM_FINAL_PROJECT
 {
@@ -33,12 +34,41 @@ namespace NIBM_FINAL_PROJECT
             int price = Convert.ToInt32(txt_price.Text);
             String img1 = txt_image_1.Text;
             String img2 = txt_image_2.Text;
+
+            try
+            {
+                int personId = Convert.ToInt32(id);
+                SqlCommand cmd = new SqlCommand("insert into Food values('" + personId + "', '" + name + "', '" + desc + "', '" + othr_info + "' ,'" + nutrition + "', '" + price + "', '" + img1 + "', '" + img2 + "')", con);
+
+                if (name != "" & desc != "" & nutrition != "" & price > 0 & img1 != "" & img2 != "" & othr_info != "")
+                {
+                    con.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    if (i != 0)
+                    {
+                        MessageBox.Show("Data Saved");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Missing Required Fields ");
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Data Not Saved To the Database");
+            }
+
         }
 
         private void AddFood_Load(object sender, EventArgs e)
         {
             con = new SqlConnection("Data Source=LAPTOP-2MIJHAB9;Initial Catalog=NIBM;Integrated Security=True");
-            txt_name.Text = userName;
+            txt_user_id.Text = userName;
         }
     }
 }

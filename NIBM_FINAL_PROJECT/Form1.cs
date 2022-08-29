@@ -81,7 +81,7 @@ namespace NIBM_FINAL_PROJECT
             if (id == null)
                 MessageBox.Show("Please Loging To System");
             else
-                new UpdateFoods().Show();
+                new UpdateFoods(name).Show();
         }
 
         private void FindsFood_Click(object sender, EventArgs e)

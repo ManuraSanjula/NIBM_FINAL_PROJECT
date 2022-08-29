@@ -69,7 +69,7 @@ namespace NIBM_FINAL_PROJECT
             }
             catch (Exception)
             {
-                MessageBox.Show("Error Occur");
+                MessageBox.Show("Data Not Saved To the Database");
             }
         }
 

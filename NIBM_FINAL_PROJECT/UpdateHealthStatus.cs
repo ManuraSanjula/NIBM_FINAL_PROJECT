@@ -108,7 +108,7 @@ namespace NIBM_FINAL_PROJECT
                 if (__ == 1)
                     MessageBox.Show("Data Updated Sucessfully");
                 else
-                    MessageBox.Show("Data Not  Updated Sucessfully");
+                    MessageBox.Show("Data Not Updated Sucessfully");
             }
             catch (Exception ex)
             {
