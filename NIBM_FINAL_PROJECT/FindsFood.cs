@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,9 +29,9 @@ namespace NIBM_FINAL_PROJECT
             this.userName = name;
             this.id = id;
         }
-
         private void FindsFood_Load(object sender, EventArgs e)
         {
+            
             con = new SqlConnection("Data Source=LAPTOP-2MIJHAB9;Initial Catalog=NIBM;Integrated Security=True");
             txt_user_id.Text = userName;
             foodName = Interaction.InputBox("Enter Food Name", "Enter Food Name", "");

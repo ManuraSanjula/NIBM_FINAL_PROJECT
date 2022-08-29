@@ -52,8 +52,9 @@ namespace NIBM_FINAL_PROJECT
                     else
                     {
                         MessageBox.Show("Data Not Found");
-                        con.Close();
                         this.Hide();
+                        this.Close();
+                        con.Close();
                     }
                 }
             }

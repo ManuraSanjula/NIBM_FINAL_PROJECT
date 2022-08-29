@@ -73,6 +73,7 @@
             this.Controls.Add(this.btn_yes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DeleteFoods";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteFoods";
             this.Load += new System.EventHandler(this.DeleteFoods_Load);
             this.ResumeLayout(false);

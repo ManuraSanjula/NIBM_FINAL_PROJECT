@@ -58,9 +58,9 @@ namespace NIBM_FINAL_PROJECT
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Data Not Saved To the Database");
+                MessageBox.Show("Data Not Saved To the Database ||" + ex.Message);
             }
 
         }

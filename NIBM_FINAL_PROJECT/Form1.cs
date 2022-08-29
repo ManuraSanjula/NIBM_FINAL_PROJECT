@@ -97,7 +97,7 @@ namespace NIBM_FINAL_PROJECT
             if (id == null)
                 MessageBox.Show("Please Loging To System");
             else
-                new DeleteFoods().Show();
+                new DeleteFoods(id).Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

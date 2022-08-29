@@ -30,8 +30,6 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.txt_user_id = new System.Windows.Forms.TextBox();
-            this.txt_image_2 = new System.Windows.Forms.TextBox();
-            this.txt_image_1 = new System.Windows.Forms.TextBox();
             this.txt_price = new System.Windows.Forms.TextBox();
             this.txt_nutrition_details = new System.Windows.Forms.TextBox();
             this.txt_other_info = new System.Windows.Forms.TextBox();
@@ -44,6 +42,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_image_2 = new System.Windows.Forms.TextBox();
+            this.txt_image_1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label8
@@ -63,23 +63,9 @@
             this.txt_user_id.Size = new System.Drawing.Size(303, 26);
             this.txt_user_id.TabIndex = 49;
             // 
-            // txt_image_2
-            // 
-            this.txt_image_2.Location = new System.Drawing.Point(830, 403);
-            this.txt_image_2.Name = "txt_image_2";
-            this.txt_image_2.Size = new System.Drawing.Size(303, 26);
-            this.txt_image_2.TabIndex = 47;
-            // 
-            // txt_image_1
-            // 
-            this.txt_image_1.Location = new System.Drawing.Point(830, 335);
-            this.txt_image_1.Name = "txt_image_1";
-            this.txt_image_1.Size = new System.Drawing.Size(303, 26);
-            this.txt_image_1.TabIndex = 46;
-            // 
             // txt_price
             // 
-            this.txt_price.Location = new System.Drawing.Point(830, 261);
+            this.txt_price.Location = new System.Drawing.Point(741, 261);
             this.txt_price.Name = "txt_price";
             this.txt_price.Size = new System.Drawing.Size(303, 26);
             this.txt_price.TabIndex = 45;
@@ -119,7 +105,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(616, 403);
+            this.label7.Location = new System.Drawing.Point(616, 416);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 29);
             this.label7.TabIndex = 40;
@@ -185,15 +171,29 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Name";
             // 
+            // txt_image_2
+            // 
+            this.txt_image_2.Location = new System.Drawing.Point(741, 416);
+            this.txt_image_2.Name = "txt_image_2";
+            this.txt_image_2.Size = new System.Drawing.Size(303, 26);
+            this.txt_image_2.TabIndex = 52;
+            // 
+            // txt_image_1
+            // 
+            this.txt_image_1.Location = new System.Drawing.Point(741, 332);
+            this.txt_image_1.Name = "txt_image_1";
+            this.txt_image_1.Size = new System.Drawing.Size(303, 26);
+            this.txt_image_1.TabIndex = 51;
+            // 
             // FindsFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 644);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txt_user_id);
+            this.ClientSize = new System.Drawing.Size(1182, 644);
             this.Controls.Add(this.txt_image_2);
             this.Controls.Add(this.txt_image_1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txt_user_id);
             this.Controls.Add(this.txt_price);
             this.Controls.Add(this.txt_nutrition_details);
             this.Controls.Add(this.txt_other_info);
@@ -220,8 +220,6 @@
 
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_user_id;
-        private System.Windows.Forms.TextBox txt_image_2;
-        private System.Windows.Forms.TextBox txt_image_1;
         private System.Windows.Forms.TextBox txt_price;
         private System.Windows.Forms.TextBox txt_nutrition_details;
         private System.Windows.Forms.TextBox txt_other_info;
@@ -234,5 +232,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_image_2;
+        private System.Windows.Forms.TextBox txt_image_1;
     }
 }
