@@ -71,11 +71,15 @@ namespace NIBM_FINAL_PROJECT
                             MessageBox.Show("Data Not Found");
                             con.Close();
                             this.Hide();
+                            this.Close();
+                            return;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
+                    this.Close();
+                    return;
                 }
 
             }

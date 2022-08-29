@@ -20,10 +20,12 @@ namespace NIBM_FINAL_PROJECT
         SqlConnection con;
         SqlCommand cmd;
         String userName;
-        public UpdateFoods(String name)
+        String id;
+        public UpdateFoods(String id, String name)
         {
             InitializeComponent();
             this.userName = name;
+            this.id = id;
         }
 
         private void btn_submits_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace NIBM_FINAL_PROJECT
             {
                 con.Open();
 
-                cmd = new SqlCommand("UPDATE Food set Name = '" + name + "',Description = '" + desc + "', OtherInformation='" + othr_info + "', NutritionDetails = '" + nutrition + "', Price ='" + price + "', Image1 ='" + img1 + "', Image2 ='" + img2 + "' where Name = '" + foodName + "' ", con);
+                cmd = new SqlCommand("UPDATE Food set Name = '" + name + "',Description = '" + desc + "', OtherInformation='" + othr_info + "', NutritionDetails = '" + nutrition + "', Price ='" + price + "', Image1 ='" + img1 + "', Image2 ='" + img2 + "' where Name = '" + foodName + "' And PersonID = '"+ Convert.ToInt32(id) +"' ", con);
 
                 int __ = cmd.ExecuteNonQuery();
                 con.Close();
@@ -59,10 +61,16 @@ namespace NIBM_FINAL_PROJECT
             con = new SqlConnection("Data Source=LAPTOP-2MIJHAB9;Initial Catalog=NIBM;Integrated Security=True");
             txt_user_id.Text = userName;
             foodName =  Interaction.InputBox("Enter Food Name", "Enter Food Name", "");
-
+            if(foodName == null || foodName == "")
+            {
+                MessageBox.Show("Please Enter Food Name");
+                this.Hide();
+                this.Close();
+                return;
+            }
             try
             {
-                cmd = new SqlCommand("select * from Food WHERE Name = '" + foodName + "'", con);
+                cmd = new SqlCommand("select * from Food WHERE Name = '" + foodName + "' And PersonID = '"+ Convert.ToInt32(id) +"' ", con);
                 con.Open();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -82,13 +90,15 @@ namespace NIBM_FINAL_PROJECT
                         MessageBox.Show("Data Not Found");
                         con.Close();
                         this.Hide();
+                        this.Close();
+                        return;
                     }
                     con.Close();
                 }
             }
             catch (Exception ex)
             {
-
+                return;
             }
         }
     }

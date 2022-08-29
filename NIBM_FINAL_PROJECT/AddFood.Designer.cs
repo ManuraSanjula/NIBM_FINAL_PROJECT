@@ -43,7 +43,6 @@
             this.txt_image_1 = new System.Windows.Forms.TextBox();
             this.txt_image_2 = new System.Windows.Forms.TextBox();
             this.btn_submits = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_user_id = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -175,21 +174,11 @@
             this.btn_submits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_submits.Location = new System.Drawing.Point(621, 506);
             this.btn_submits.Name = "btn_submits";
-            this.btn_submits.Size = new System.Drawing.Size(131, 67);
+            this.btn_submits.Size = new System.Drawing.Size(531, 67);
             this.btn_submits.TabIndex = 14;
             this.btn_submits.Text = "Submit";
             this.btn_submits.UseVisualStyleBackColor = true;
             this.btn_submits.Click += new System.EventHandler(this.btn_submits_Click);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(795, 506);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(131, 67);
-            this.btn_close.TabIndex = 15;
-            this.btn_close.Text = "Close";
-            this.btn_close.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -215,7 +204,6 @@
             this.ClientSize = new System.Drawing.Size(1220, 674);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_user_id);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.btn_submits);
             this.Controls.Add(this.txt_image_2);
             this.Controls.Add(this.txt_image_1);
@@ -258,7 +246,6 @@
         private System.Windows.Forms.TextBox txt_image_1;
         private System.Windows.Forms.TextBox txt_image_2;
         private System.Windows.Forms.Button btn_submits;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_user_id;
     }

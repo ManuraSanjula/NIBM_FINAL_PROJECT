@@ -121,8 +121,14 @@
     <EmbeddedResource Include="AddHealthInformation.resx">
       <DependentUpon>AddHealthInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteFoods.resx">
+      <DependentUpon>DeleteFoods.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteUserHealthInfo.resx">
       <DependentUpon>DeleteUserHealthInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindsFood.resx">
+      <DependentUpon>FindsFood.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

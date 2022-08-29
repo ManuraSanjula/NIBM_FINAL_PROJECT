@@ -81,7 +81,7 @@ namespace NIBM_FINAL_PROJECT
             if (id == null)
                 MessageBox.Show("Please Loging To System");
             else
-                new UpdateFoods(name).Show();
+                new UpdateFoods(id,name).Show();
         }
 
         private void FindsFood_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace NIBM_FINAL_PROJECT
             if (id == null)
                 MessageBox.Show("Please Loging To System");
             else
-                new FindsFood().Show();
+                new FindsFood(id,name).Show();
         }
 
         private void DeleteFoods_Click(object sender, EventArgs e)
