@@ -42,8 +42,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_image_2 = new System.Windows.Forms.TextBox();
-            this.txt_image_1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -105,7 +107,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(616, 416);
+            this.label7.Location = new System.Drawing.Point(973, 346);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 29);
             this.label7.TabIndex = 40;
@@ -115,7 +117,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(616, 332);
+            this.label6.Location = new System.Drawing.Point(616, 346);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 29);
             this.label6.TabIndex = 39;
@@ -171,27 +173,29 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Name";
             // 
-            // txt_image_2
+            // pictureBox1
             // 
-            this.txt_image_2.Location = new System.Drawing.Point(741, 416);
-            this.txt_image_2.Name = "txt_image_2";
-            this.txt_image_2.Size = new System.Drawing.Size(303, 26);
-            this.txt_image_2.TabIndex = 52;
+            this.pictureBox1.Location = new System.Drawing.Point(621, 387);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 222);
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
             // 
-            // txt_image_1
+            // pictureBox2
             // 
-            this.txt_image_1.Location = new System.Drawing.Point(741, 332);
-            this.txt_image_1.Name = "txt_image_1";
-            this.txt_image_1.Size = new System.Drawing.Size(303, 26);
-            this.txt_image_1.TabIndex = 51;
+            this.pictureBox2.Location = new System.Drawing.Point(920, 387);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(229, 222);
+            this.pictureBox2.TabIndex = 54;
+            this.pictureBox2.TabStop = false;
             // 
             // FindsFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 644);
-            this.Controls.Add(this.txt_image_2);
-            this.Controls.Add(this.txt_image_1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_user_id);
             this.Controls.Add(this.txt_price);
@@ -211,6 +215,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FindsFood";
             this.Load += new System.EventHandler(this.FindsFood_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +238,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_image_2;
-        private System.Windows.Forms.TextBox txt_image_1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

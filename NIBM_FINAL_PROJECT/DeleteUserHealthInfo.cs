@@ -36,18 +36,9 @@ namespace NIBM_FINAL_PROJECT
                 con.Open();
                 myreader = cmd.ExecuteReader();
 
-                if (myreader.Read())
-                {
-                    MessageBox.Show("Successfully data Deleted", "user information");
-                    this.Hide();
-                    con.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Given Data not in the database");
-                    this.Hide();
-                    con.Close();
-                }
+                MessageBox.Show("Successfully data Deleted", "user information");
+                this.Hide();
+                con.Close();
             }
             catch (Exception ec)
             {

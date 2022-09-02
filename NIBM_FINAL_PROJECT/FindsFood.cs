@@ -55,8 +55,24 @@ namespace NIBM_FINAL_PROJECT
                         txt_other_info.Text = reader[4].ToString();
                         txt_nutrition_details.Text = reader[5].ToString();
                         txt_price.Text = reader[6].ToString();
-                        txt_image_1.Text = reader[7].ToString();
-                        txt_image_2.Text = reader[8].ToString();
+                       
+                        var request = WebRequest.Create(reader[7].ToString());
+                        using (var response = request.GetResponse())
+                        using (var stream = response.GetResponseStream())
+                        {
+                            pictureBox1.Image = Bitmap.FromStream(stream);
+                            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                        }
+
+                        request = WebRequest.Create(reader[8].ToString());
+                        using (var response = request.GetResponse())
+                        using (var stream = response.GetResponseStream())
+                        {
+                            pictureBox2.Image = Bitmap.FromStream(stream);
+                            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                        }
                         con.Close();
                     }
                     else
