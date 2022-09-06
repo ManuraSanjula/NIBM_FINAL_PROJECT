@@ -126,7 +126,7 @@
     <value>Nirmala UI, 18pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 42</value>
+    <value>51, 79</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -158,7 +158,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="GetHealthInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 134</value>
+    <value>59, 161</value>
   </data>
   <data name="GetHealthInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -188,7 +188,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="UpdateHealthStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 134</value>
+    <value>329, 161</value>
   </data>
   <data name="UpdateHealthStatus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -218,7 +218,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="DeleteHealthRecords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>573, 134</value>
+    <value>582, 161</value>
   </data>
   <data name="DeleteHealthRecords.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -248,7 +248,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="AddFood.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 300</value>
+    <value>59, 327</value>
   </data>
   <data name="AddFood.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -278,7 +278,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="AddHealthInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>834, 134</value>
+    <value>843, 161</value>
   </data>
   <data name="AddHealthInformation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -308,7 +308,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="FindsFood.Location" type="System.Drawing.Point, System.Drawing">
-    <value>320, 300</value>
+    <value>329, 327</value>
   </data>
   <data name="FindsFood.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -338,7 +338,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="DeleteFoods.Location" type="System.Drawing.Point, System.Drawing">
-    <value>573, 300</value>
+    <value>582, 327</value>
   </data>
   <data name="DeleteFoods.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -365,7 +365,7 @@
     <value>4</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>867, 500</value>
+    <value>872, 488</value>
   </data>
   <data name="button3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -395,7 +395,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="UpdateFoods.Location" type="System.Drawing.Point, System.Drawing">
-    <value>834, 300</value>
+    <value>843, 327</value>
   </data>
   <data name="UpdateFoods.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -428,7 +428,7 @@
     <value>NoControl</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>906, 5</value>
+    <value>911, 38</value>
   </data>
   <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -461,7 +461,7 @@
     <value>NoControl</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>720, 5</value>
+    <value>725, 38</value>
   </data>
   <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -487,6 +487,51 @@
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="advancedOptionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 34</value>
+  </data>
+  <data name="advancedOptionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Advanced Options</value>
+  </data>
+  <data name="reportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 34</value>
+  </data>
+  <data name="reportToolStripMenuItem.Text" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="otherToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 29</value>
+  </data>
+  <data name="otherToolStripMenuItem.Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1052, 33</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -507,6 +552,24 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>YoYo</value>
+  </data>
+  <data name="&gt;&gt;otherToolStripMenuItem.Name" xml:space="preserve">
+    <value>otherToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;otherToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;advancedOptionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>advancedOptionsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;advancedOptionsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reportToolStripMenuItem.Name" xml:space="preserve">
+    <value>reportToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;reportToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>

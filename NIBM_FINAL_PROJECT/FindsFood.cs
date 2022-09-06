@@ -88,6 +88,8 @@ namespace NIBM_FINAL_PROJECT
             }
             catch (Exception ex)
             {
+                ErroController.SendErrorData(ex.Message, ex.ToString());
+                this.Close();
                 return;
             }
         }

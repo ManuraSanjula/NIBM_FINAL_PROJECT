@@ -8,28 +8,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
 
 namespace NIBM_FINAL_PROJECT
 {
-    public partial class Signup : Form
+    public partial class Report : Form
     {
         SqlConnection con;
-        public Signup()
+        int userId;
+        String name;
+        public Report(int userId, String name)
         {
+            this.name = name;
+            this.userId = userId;
             InitializeComponent();
         }
 
-        private void btn_Signup_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                String userName = txt_username.Text;
-                String password = txt_password.Text;
-               
-                SqlCommand cmd = new SqlCommand("insert into Person values('" + userName + "', '" + password + "')", con);
+                String report = textBox1.Text;
+                SqlCommand cmd = new SqlCommand("insert into Report values('" + userId + "', '" + report + "')", con);
 
-                if (userName != "" & password != "")
+                if (userId != null & report != "")
                 {
                     con.Open();
                     int i = cmd.ExecuteNonQuery();
@@ -41,15 +43,12 @@ namespace NIBM_FINAL_PROJECT
                         new Form1().Show();
                         this.Close();
                     }
-                    txt_password.Text = "";
-                    txt_username.Text = "";
-
                 }
                 else
                 {
                     MessageBox.Show("Missing Required Fields ");
                 }
-                    
+
             }
             catch (Exception ex)
             {
@@ -59,9 +58,11 @@ namespace NIBM_FINAL_PROJECT
             }
         }
 
-        private void Signup_Load(object sender, EventArgs e)
+        private void Report_Load(object sender, EventArgs e)
         {
             con = new SqlConnection("Data Source=LAPTOP-2MIJHAB9;Initial Catalog=NIBM;Integrated Security=True");
+            user_name.Text = name;
+            user_id.Text = userId.ToString();
         }
     }
 }

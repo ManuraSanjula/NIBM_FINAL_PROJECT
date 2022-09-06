@@ -43,6 +43,8 @@ namespace NIBM_FINAL_PROJECT
             catch (Exception ec)
             {
                 MessageBox.Show(ec.Message);
+                ErroController.SendErrorData(ec.Message, ec.ToString());
+                this.Close();
             }
         }  
 
@@ -50,7 +52,8 @@ namespace NIBM_FINAL_PROJECT
 
         private void btn_no_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
+            new Form1().Show();
         }
     }
 }

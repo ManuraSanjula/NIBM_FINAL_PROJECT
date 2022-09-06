@@ -100,6 +100,26 @@ namespace NIBM_FINAL_PROJECT
                 new DeleteFoods(id).Show();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void advancedOptionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Login(false).Show();
+        }
+
+        private void reportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (id == null)
+                MessageBox.Show("Please Loging To System");
+            else
+            {
+                new Report(Convert.ToInt32(id), name).Show();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             new Signup().Show();
@@ -107,7 +127,7 @@ namespace NIBM_FINAL_PROJECT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Login().Show();
+            new Login(true).Show();
             this.Hide();
         }
 

@@ -52,6 +52,7 @@ namespace NIBM_FINAL_PROJECT
                 }
                 catch (Exception ec)
                 {
+                    ErroController.SendErrorData(ec.Message, ec.ToString());
                     MessageBox.Show(ec.Message);
                 }
             }
@@ -59,7 +60,8 @@ namespace NIBM_FINAL_PROJECT
 
         private void btn_no_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            new Form1().Show();
         }
 
         private void DeleteFoods_Load(object sender, EventArgs e)

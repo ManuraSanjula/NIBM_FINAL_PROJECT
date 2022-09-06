@@ -59,6 +59,12 @@
     <Compile Include="AddHealthInformation.Designer.cs">
       <DependentUpon>AddHealthInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdvanceOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvanceOption.Designer.cs">
+      <DependentUpon>AdvanceOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteFoods.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,13 @@
     </Compile>
     <Compile Include="DeleteUserHealthInfo.Designer.cs">
       <DependentUpon>DeleteUserHealthInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErroController.cs" />
+    <Compile Include="ErrorShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorShow.Designer.cs">
+      <DependentUpon>ErrorShow.cs</DependentUpon>
     </Compile>
     <Compile Include="FindsFood.cs">
       <SubType>Form</SubType>
@@ -95,8 +108,25 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="NIBMDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NIBMDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowReports.Designer.cs">
+      <DependentUpon>ShowReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +151,17 @@
     <EmbeddedResource Include="AddHealthInformation.resx">
       <DependentUpon>AddHealthInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdvanceOption.resx">
+      <DependentUpon>AdvanceOption.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteFoods.resx">
       <DependentUpon>DeleteFoods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteUserHealthInfo.resx">
       <DependentUpon>DeleteUserHealthInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorShow.resx">
+      <DependentUpon>ErrorShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindsFood.resx">
       <DependentUpon>FindsFood.cs</DependentUpon>
@@ -148,6 +184,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowReports.resx">
+      <DependentUpon>ShowReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +199,17 @@
     <EmbeddedResource Include="UpdateHealthStatus.resx">
       <DependentUpon>UpdateHealthStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="NIBMDataSet.xsc">
+      <DependentUpon>NIBMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NIBMDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NIBMDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NIBMDataSet.xss">
+      <DependentUpon>NIBMDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

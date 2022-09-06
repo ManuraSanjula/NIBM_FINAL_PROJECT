@@ -19,9 +19,11 @@ namespace NIBM_FINAL_PROJECT
         SqlCommand cmd;
         String userId = "";
         String name = "";
-        public Login()
+        Boolean userLogging;
+        public Login(Boolean userLogging)
         {
             InitializeComponent();
+            this.userLogging = userLogging;
         }
 
         public static bool IsNullOrEmpty(List<String> list)
@@ -36,49 +38,63 @@ namespace NIBM_FINAL_PROJECT
 
             if (userName == "" & password == "")
             {
-                MessageBox.Show("Please Enter UserName  and Password");
+                MessageBox.Show("Please Enter UserName and Password");
                 return;
             }
-               
-            try
-            {
-                cmd = new SqlCommand("select * from Person where UserName = '"+userName+ "'", con);
-                con.Open();
 
-                using (SqlDataReader reader = cmd.ExecuteReader())
+            if (!userLogging)
+            {
+                if(userName == "Admin" & password == "asdfghjkl")
                 {
-                    /*List<string> list = (from IDataRecord r in reader
-                                         select (string)r["UserName Password Invalid"]
-                    ).ToList();*/
-                    if (reader.Read())
+                    new AdvanceOption().Show();
+                    this.Close();
+                }else
+                    MessageBox.Show("Please Enter UserName and Password");
+            }
+            else
+            {
+                try
+                {
+                    cmd = new SqlCommand("select * from Person where UserName = '" + userName + "'", con);
+                    con.Open();
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        if(password == reader[2].ToString())
+                        /*List<string> list = (from IDataRecord r in reader
+                                             select (string)r["UserName Password Invalid"]
+                        ).ToList();*/
+                        if (reader.Read())
                         {
-                            userId = reader[0].ToString();
-                            name = reader[1].ToString();
-                            new Form1(userId, name).Show();
-                            this.Hide();
+                            if (password == reader[2].ToString())
+                            {
+                                userId = reader[0].ToString();
+                                name = reader[1].ToString();
+                                new Form1(userId, name).Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("UserName Password Invalid");
+                                this.Close();
+                                new Form1(null, null).Show();
+                            }
                         }
                         else
                         {
                             MessageBox.Show("UserName Password Invalid");
-                            this.Hide();
+                            this.Close();
                             new Form1(null, null).Show();
                         }
+
+                        con.Close();
                     }
-                    else
-                    {
-                        MessageBox.Show("UserName Password Invalid");
-                        this.Hide();
-                        new Form1(null, null).Show();
-                    }
-                   
-                    con.Close();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (Exception ex)
+                {
+                    ErroController.SendErrorData(ex.Message, ex.ToString());
+                    MessageBox.Show(ex.Message);
+                    this.Close();
+                }
             }
         }
 
