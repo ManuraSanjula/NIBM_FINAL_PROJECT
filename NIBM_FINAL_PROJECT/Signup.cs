@@ -54,7 +54,6 @@ namespace NIBM_FINAL_PROJECT
             catch (Exception ex)
             {
                 con.Close();
-                ErroController.SendErrorData(ex.Message, ex.ToString());
                 MessageBox.Show("Error Occur");
             }
         }

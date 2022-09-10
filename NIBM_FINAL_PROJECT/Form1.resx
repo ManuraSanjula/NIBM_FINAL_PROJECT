@@ -158,7 +158,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="GetHealthInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 161</value>
+    <value>36, 169</value>
   </data>
   <data name="GetHealthInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -188,7 +188,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="UpdateHealthStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 161</value>
+    <value>306, 169</value>
   </data>
   <data name="UpdateHealthStatus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -218,7 +218,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="DeleteHealthRecords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 161</value>
+    <value>559, 169</value>
   </data>
   <data name="DeleteHealthRecords.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -248,7 +248,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="AddFood.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 327</value>
+    <value>36, 335</value>
   </data>
   <data name="AddFood.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -278,7 +278,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="AddHealthInformation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>843, 161</value>
+    <value>820, 169</value>
   </data>
   <data name="AddHealthInformation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -308,7 +308,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="FindsFood.Location" type="System.Drawing.Point, System.Drawing">
-    <value>329, 327</value>
+    <value>306, 335</value>
   </data>
   <data name="FindsFood.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -338,7 +338,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="DeleteFoods.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 327</value>
+    <value>559, 335</value>
   </data>
   <data name="DeleteFoods.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -395,7 +395,7 @@
     <value>Microsoft YaHei UI, 9.75pt</value>
   </data>
   <data name="UpdateFoods.Location" type="System.Drawing.Point, System.Drawing">
-    <value>843, 327</value>
+    <value>820, 335</value>
   </data>
   <data name="UpdateFoods.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
@@ -494,7 +494,7 @@
     <value>270, 34</value>
   </data>
   <data name="advancedOptionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Advanced Options</value>
+    <value>Show Reports</value>
   </data>
   <data name="reportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 34</value>

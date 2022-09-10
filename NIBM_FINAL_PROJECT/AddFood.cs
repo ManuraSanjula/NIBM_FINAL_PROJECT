@@ -61,7 +61,6 @@ namespace NIBM_FINAL_PROJECT
             catch (Exception ex)
             {
                 MessageBox.Show("Data Not Saved To the Database ||" + ex.Message);
-                ErroController.SendErrorData(ex.Message, ex.ToString());
             }
 
         }

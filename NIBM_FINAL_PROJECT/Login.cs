@@ -46,7 +46,7 @@ namespace NIBM_FINAL_PROJECT
             {
                 if(userName == "Admin" & password == "asdfghjkl")
                 {
-                    new AdvanceOption().Show();
+                    new ShowReports().Show();
                     this.Close();
                 }else
                     MessageBox.Show("Please Enter UserName and Password");
@@ -91,7 +91,6 @@ namespace NIBM_FINAL_PROJECT
                 }
                 catch (Exception ex)
                 {
-                    ErroController.SendErrorData(ex.Message, ex.ToString());
                     MessageBox.Show(ex.Message);
                     this.Close();
                 }

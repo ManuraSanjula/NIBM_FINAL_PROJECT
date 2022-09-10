@@ -43,7 +43,6 @@ namespace NIBM_FINAL_PROJECT
             catch (Exception ec)
             {
                 MessageBox.Show(ec.Message);
-                ErroController.SendErrorData(ec.Message, ec.ToString());
                 this.Close();
             }
         }  

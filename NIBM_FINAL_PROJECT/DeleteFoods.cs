@@ -52,7 +52,6 @@ namespace NIBM_FINAL_PROJECT
                 }
                 catch (Exception ec)
                 {
-                    ErroController.SendErrorData(ec.Message, ec.ToString());
                     MessageBox.Show(ec.Message);
                 }
             }

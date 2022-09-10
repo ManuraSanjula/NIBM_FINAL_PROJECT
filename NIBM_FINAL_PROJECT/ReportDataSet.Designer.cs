@@ -20,17 +20,17 @@ namespace NIBM_FINAL_PROJECT {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("NIBMDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ReportDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class NIBMDataSet : global::System.Data.DataSet {
+    public partial class ReportDataSet : global::System.Data.DataSet {
         
-        private ErrorDataTable tableError;
+        private ReportDataTable tableReport;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public NIBMDataSet() {
+        public ReportDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace NIBM_FINAL_PROJECT {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected NIBMDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ReportDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace NIBM_FINAL_PROJECT {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Error"] != null)) {
-                    base.Tables.Add(new ErrorDataTable(ds.Tables["Error"]));
+                if ((ds.Tables["Report"] != null)) {
+                    base.Tables.Add(new ReportDataTable(ds.Tables["Report"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace NIBM_FINAL_PROJECT {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ErrorDataTable Error {
+        public ReportDataTable Report {
             get {
-                return this.tableError;
+                return this.tableReport;
             }
         }
         
@@ -127,7 +127,7 @@ namespace NIBM_FINAL_PROJECT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            NIBMDataSet cln = ((NIBMDataSet)(base.Clone()));
+            ReportDataSet cln = ((ReportDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace NIBM_FINAL_PROJECT {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Error"] != null)) {
-                    base.Tables.Add(new ErrorDataTable(ds.Tables["Error"]));
+                if ((ds.Tables["Report"] != null)) {
+                    base.Tables.Add(new ReportDataTable(ds.Tables["Report"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace NIBM_FINAL_PROJECT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableError = ((ErrorDataTable)(base.Tables["Error"]));
+            this.tableReport = ((ReportDataTable)(base.Tables["Report"]));
             if ((initTable == true)) {
-                if ((this.tableError != null)) {
-                    this.tableError.InitVars();
+                if ((this.tableReport != null)) {
+                    this.tableReport.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace NIBM_FINAL_PROJECT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "NIBMDataSet";
+            this.DataSetName = "ReportDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/NIBMDataSet.xsd";
+            this.Namespace = "http://tempuri.org/ReportDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableError = new ErrorDataTable();
-            base.Tables.Add(this.tableError);
+            this.tableReport = new ReportDataTable();
+            base.Tables.Add(this.tableReport);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeError() {
+        private bool ShouldSerializeReport() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace NIBM_FINAL_PROJECT {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            NIBMDataSet ds = new NIBMDataSet();
+            ReportDataSet ds = new ReportDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,25 @@ namespace NIBM_FINAL_PROJECT {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ErrorRowChangeEventHandler(object sender, ErrorRowChangeEvent e);
+        public delegate void ReportRowChangeEventHandler(object sender, ReportRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ErrorDataTable : global::System.Data.TypedTableBase<ErrorRow> {
+        public partial class ReportDataTable : global::System.Data.TypedTableBase<ReportRow> {
             
-            private global::System.Data.DataColumn columnErrorId;
+            private global::System.Data.DataColumn columnReportId;
             
-            private global::System.Data.DataColumn columnMessage;
+            private global::System.Data.DataColumn columnPersonID;
             
-            private global::System.Data.DataColumn columnStringFormat;
+            private global::System.Data.DataColumn columnReport;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorDataTable() {
-                this.TableName = "Error";
+            public ReportDataTable() {
+                this.TableName = "Report";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace NIBM_FINAL_PROJECT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ErrorDataTable(global::System.Data.DataTable table) {
+            internal ReportDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,32 +313,32 @@ namespace NIBM_FINAL_PROJECT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ErrorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ErrorIdColumn {
+            public global::System.Data.DataColumn ReportIdColumn {
                 get {
-                    return this.columnErrorId;
+                    return this.columnReportId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MessageColumn {
+            public global::System.Data.DataColumn PersonIDColumn {
                 get {
-                    return this.columnMessage;
+                    return this.columnPersonID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StringFormatColumn {
+            public global::System.Data.DataColumn ReportColumn {
                 get {
-                    return this.columnStringFormat;
+                    return this.columnReport;
                 }
             }
             
@@ -353,54 +353,54 @@ namespace NIBM_FINAL_PROJECT {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorRow this[int index] {
+            public ReportRow this[int index] {
                 get {
-                    return ((ErrorRow)(this.Rows[index]));
+                    return ((ReportRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ErrorRowChangeEventHandler ErrorRowChanging;
+            public event ReportRowChangeEventHandler ReportRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ErrorRowChangeEventHandler ErrorRowChanged;
+            public event ReportRowChangeEventHandler ReportRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ErrorRowChangeEventHandler ErrorRowDeleting;
+            public event ReportRowChangeEventHandler ReportRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ErrorRowChangeEventHandler ErrorRowDeleted;
+            public event ReportRowChangeEventHandler ReportRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddErrorRow(ErrorRow row) {
+            public void AddReportRow(ReportRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorRow AddErrorRow(string Message, string StringFormat) {
-                ErrorRow rowErrorRow = ((ErrorRow)(this.NewRow()));
+            public ReportRow AddReportRow(int PersonID, string Report) {
+                ReportRow rowReportRow = ((ReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Message,
-                        StringFormat};
-                rowErrorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowErrorRow);
-                return rowErrorRow;
+                        PersonID,
+                        Report};
+                rowReportRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportRow);
+                return rowReportRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorRow FindByErrorId(int ErrorId) {
-                return ((ErrorRow)(this.Rows.Find(new object[] {
-                            ErrorId})));
+            public ReportRow FindByReportId(int ReportId) {
+                return ((ReportRow)(this.Rows.Find(new object[] {
+                            ReportId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ErrorDataTable cln = ((ErrorDataTable)(base.Clone()));
+                ReportDataTable cln = ((ReportDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,62 +408,61 @@ namespace NIBM_FINAL_PROJECT {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ErrorDataTable();
+                return new ReportDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnErrorId = base.Columns["ErrorId"];
-                this.columnMessage = base.Columns["Message"];
-                this.columnStringFormat = base.Columns["StringFormat"];
+                this.columnReportId = base.Columns["ReportId"];
+                this.columnPersonID = base.Columns["PersonID"];
+                this.columnReport = base.Columns["Report"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnErrorId = new global::System.Data.DataColumn("ErrorId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnErrorId);
-                this.columnMessage = new global::System.Data.DataColumn("Message", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMessage);
-                this.columnStringFormat = new global::System.Data.DataColumn("StringFormat", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStringFormat);
+                this.columnReportId = new global::System.Data.DataColumn("ReportId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReportId);
+                this.columnPersonID = new global::System.Data.DataColumn("PersonID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonID);
+                this.columnReport = new global::System.Data.DataColumn("Report", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReport);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnErrorId}, true));
-                this.columnErrorId.AutoIncrement = true;
-                this.columnErrorId.AutoIncrementSeed = -1;
-                this.columnErrorId.AutoIncrementStep = -1;
-                this.columnErrorId.AllowDBNull = false;
-                this.columnErrorId.ReadOnly = true;
-                this.columnErrorId.Unique = true;
-                this.columnMessage.MaxLength = 255;
-                this.columnStringFormat.MaxLength = 1000;
+                                this.columnReportId}, true));
+                this.columnReportId.AutoIncrement = true;
+                this.columnReportId.AutoIncrementSeed = -1;
+                this.columnReportId.AutoIncrementStep = -1;
+                this.columnReportId.AllowDBNull = false;
+                this.columnReportId.ReadOnly = true;
+                this.columnReportId.Unique = true;
+                this.columnReport.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorRow NewErrorRow() {
-                return ((ErrorRow)(this.NewRow()));
+            public ReportRow NewReportRow() {
+                return ((ReportRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ErrorRow(builder);
+                return new ReportRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ErrorRow);
+                return typeof(ReportRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ErrorRowChanged != null)) {
-                    this.ErrorRowChanged(this, new ErrorRowChangeEvent(((ErrorRow)(e.Row)), e.Action));
+                if ((this.ReportRowChanged != null)) {
+                    this.ReportRowChanged(this, new ReportRowChangeEvent(((ReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -471,8 +470,8 @@ namespace NIBM_FINAL_PROJECT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ErrorRowChanging != null)) {
-                    this.ErrorRowChanging(this, new ErrorRowChangeEvent(((ErrorRow)(e.Row)), e.Action));
+                if ((this.ReportRowChanging != null)) {
+                    this.ReportRowChanging(this, new ReportRowChangeEvent(((ReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -480,8 +479,8 @@ namespace NIBM_FINAL_PROJECT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ErrorRowDeleted != null)) {
-                    this.ErrorRowDeleted(this, new ErrorRowChangeEvent(((ErrorRow)(e.Row)), e.Action));
+                if ((this.ReportRowDeleted != null)) {
+                    this.ReportRowDeleted(this, new ReportRowChangeEvent(((ReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -489,14 +488,14 @@ namespace NIBM_FINAL_PROJECT {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ErrorRowDeleting != null)) {
-                    this.ErrorRowDeleting(this, new ErrorRowChangeEvent(((ErrorRow)(e.Row)), e.Action));
+                if ((this.ReportRowDeleting != null)) {
+                    this.ReportRowDeleting(this, new ReportRowChangeEvent(((ReportRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveErrorRow(ErrorRow row) {
+            public void RemoveReportRow(ReportRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -505,7 +504,7 @@ namespace NIBM_FINAL_PROJECT {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NIBMDataSet ds = new NIBMDataSet();
+                ReportDataSet ds = new ReportDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -523,7 +522,7 @@ namespace NIBM_FINAL_PROJECT {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ErrorDataTable";
+                attribute2.FixedValue = "ReportDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -567,82 +566,82 @@ namespace NIBM_FINAL_PROJECT {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ErrorRow : global::System.Data.DataRow {
+        public partial class ReportRow : global::System.Data.DataRow {
             
-            private ErrorDataTable tableError;
+            private ReportDataTable tableReport;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ErrorRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableError = ((ErrorDataTable)(this.Table));
+                this.tableReport = ((ReportDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ErrorId {
+            public int ReportId {
                 get {
-                    return ((int)(this[this.tableError.ErrorIdColumn]));
+                    return ((int)(this[this.tableReport.ReportIdColumn]));
                 }
                 set {
-                    this[this.tableError.ErrorIdColumn] = value;
+                    this[this.tableReport.ReportIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Message {
-                get {
-                    try {
-                        return ((string)(this[this.tableError.MessageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Message\' in table \'Error\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableError.MessageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string StringFormat {
+            public int PersonID {
                 get {
                     try {
-                        return ((string)(this[this.tableError.StringFormatColumn]));
+                        return ((int)(this[this.tableReport.PersonIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'StringFormat\' in table \'Error\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonID\' in table \'Report\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableError.StringFormatColumn] = value;
+                    this[this.tableReport.PersonIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMessageNull() {
-                return this.IsNull(this.tableError.MessageColumn);
+            public string Report {
+                get {
+                    try {
+                        return ((string)(this[this.tableReport.ReportColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Report\' in table \'Report\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReport.ReportColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMessageNull() {
-                this[this.tableError.MessageColumn] = global::System.Convert.DBNull;
+            public bool IsPersonIDNull() {
+                return this.IsNull(this.tableReport.PersonIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsStringFormatNull() {
-                return this.IsNull(this.tableError.StringFormatColumn);
+            public void SetPersonIDNull() {
+                this[this.tableReport.PersonIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetStringFormatNull() {
-                this[this.tableError.StringFormatColumn] = global::System.Convert.DBNull;
+            public bool IsReportNull() {
+                return this.IsNull(this.tableReport.ReportColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetReportNull() {
+                this[this.tableReport.ReportColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -650,22 +649,22 @@ namespace NIBM_FINAL_PROJECT {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ErrorRowChangeEvent : global::System.EventArgs {
+        public class ReportRowChangeEvent : global::System.EventArgs {
             
-            private ErrorRow eventRow;
+            private ReportRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorRowChangeEvent(ErrorRow row, global::System.Data.DataRowAction action) {
+            public ReportRowChangeEvent(ReportRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ErrorRow Row {
+            public ReportRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -681,7 +680,7 @@ namespace NIBM_FINAL_PROJECT {
         }
     }
 }
-namespace NIBM_FINAL_PROJECT.NIBMDataSetTableAdapters {
+namespace NIBM_FINAL_PROJECT.ReportDataSetTableAdapters {
     
     
     /// <summary>
@@ -693,7 +692,7 @@ namespace NIBM_FINAL_PROJECT.NIBMDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ErrorTableAdapter : global::System.ComponentModel.Component {
+    public partial class ReportTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -707,7 +706,7 @@ namespace NIBM_FINAL_PROJECT.NIBMDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ErrorTableAdapter() {
+        public ReportTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -804,44 +803,43 @@ namespace NIBM_FINAL_PROJECT.NIBMDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Error";
-            tableMapping.ColumnMappings.Add("ErrorId", "ErrorId");
-            tableMapping.ColumnMappings.Add("Message", "Message");
-            tableMapping.ColumnMappings.Add("StringFormat", "StringFormat");
+            tableMapping.DataSetTable = "Report";
+            tableMapping.ColumnMappings.Add("ReportId", "ReportId");
+            tableMapping.ColumnMappings.Add("PersonID", "PersonID");
+            tableMapping.ColumnMappings.Add("Report", "Report");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Error] WHERE (([ErrorId] = @Original_ErrorId) AND ((@IsNull_Me" +
-                "ssage = 1 AND [Message] IS NULL) OR ([Message] = @Original_Message)) AND ((@IsNu" +
-                "ll_StringFormat = 1 AND [StringFormat] IS NULL) OR ([StringFormat] = @Original_S" +
-                "tringFormat)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Report] WHERE (([ReportId] = @Original_ReportId) AND ((@IsNull" +
+                "_PersonID = 1 AND [PersonID] IS NULL) OR ([PersonID] = @Original_PersonID)) AND " +
+                "((@IsNull_Report = 1 AND [Report] IS NULL) OR ([Report] = @Original_Report)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ErrorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Message", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StringFormat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StringFormat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StringFormat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StringFormat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReportId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReportId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PersonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Report", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Report", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Report", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Report", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Error] ([Message], [StringFormat]) VALUES (@Message, @StringFo" +
-                "rmat);\r\nSELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = SCOPE_" +
-                "IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Report] ([PersonID], [Report]) VALUES (@PersonID, @Report);\r\nS" +
+                "ELECT ReportId, PersonID, Report FROM Report WHERE (ReportId = SCOPE_IDENTITY())" +
+                "";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StringFormat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StringFormat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Report", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Report", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Error] SET [Message] = @Message, [StringFormat] = @StringFormat WHERE (([ErrorId] = @Original_ErrorId) AND ((@IsNull_Message = 1 AND [Message] IS NULL) OR ([Message] = @Original_Message)) AND ((@IsNull_StringFormat = 1 AND [StringFormat] IS NULL) OR ([StringFormat] = @Original_StringFormat)));
-SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Report] SET [PersonID] = @PersonID, [Report] = @Report WHERE (([ReportId] = @Original_ReportId) AND ((@IsNull_PersonID = 1 AND [PersonID] IS NULL) OR ([PersonID] = @Original_PersonID)) AND ((@IsNull_Report = 1 AND [Report] IS NULL) OR ([Report] = @Original_Report)));
+SELECT ReportId, PersonID, Report FROM Report WHERE (ReportId = @ReportId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StringFormat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StringFormat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ErrorId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Message", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Message", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Message", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StringFormat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StringFormat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StringFormat", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StringFormat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ErrorId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ErrorId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PersonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Report", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Report", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReportId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReportId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PersonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PersonID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PersonID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Report", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Report", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Report", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Report", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ReportId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ReportId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -857,7 +855,7 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ErrorId, Message, StringFormat FROM dbo.Error";
+            this._commandCollection[0].CommandText = "SELECT ReportId, PersonID, Report FROM dbo.Report";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -865,7 +863,7 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NIBMDataSet.ErrorDataTable dataTable) {
+        public virtual int Fill(ReportDataSet.ReportDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -878,9 +876,9 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NIBMDataSet.ErrorDataTable GetData() {
+        public virtual ReportDataSet.ReportDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            NIBMDataSet.ErrorDataTable dataTable = new NIBMDataSet.ErrorDataTable();
+            ReportDataSet.ReportDataTable dataTable = new ReportDataSet.ReportDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -888,15 +886,15 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NIBMDataSet.ErrorDataTable dataTable) {
+        public virtual int Update(ReportDataSet.ReportDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NIBMDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Error");
+        public virtual int Update(ReportDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "Report");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -918,23 +916,23 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ErrorId, string Original_Message, string Original_StringFormat) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ErrorId));
-            if ((Original_Message == null)) {
+        public virtual int Delete(int Original_ReportId, global::System.Nullable<int> Original_PersonID, string Original_Report) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ReportId));
+            if ((Original_PersonID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PersonID.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Message));
-            }
-            if ((Original_StringFormat == null)) {
+            if ((Original_Report == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_StringFormat));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Report));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -956,18 +954,18 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Message, string StringFormat) {
-            if ((Message == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(global::System.Nullable<int> PersonID, string Report) {
+            if ((PersonID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(PersonID.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Message));
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((StringFormat == null)) {
+            if ((Report == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(StringFormat));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Report));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -989,37 +987,37 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Message, string StringFormat, int Original_ErrorId, string Original_Message, string Original_StringFormat, int ErrorId) {
-            if ((Message == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(global::System.Nullable<int> PersonID, string Report, int Original_ReportId, global::System.Nullable<int> Original_PersonID, string Original_Report, int ReportId) {
+            if ((PersonID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(PersonID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Message));
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((StringFormat == null)) {
+            if ((Report == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(StringFormat));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Report));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ErrorId));
-            if ((Original_Message == null)) {
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ReportId));
+            if ((Original_PersonID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_PersonID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Message));
-            }
-            if ((Original_StringFormat == null)) {
+            if ((Original_Report == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_StringFormat));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Report));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ErrorId));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(ReportId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1040,8 +1038,8 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Message, string StringFormat, int Original_ErrorId, string Original_Message, string Original_StringFormat) {
-            return this.Update(Message, StringFormat, Original_ErrorId, Original_Message, Original_StringFormat, Original_ErrorId);
+        public virtual int Update(global::System.Nullable<int> PersonID, string Report, int Original_ReportId, global::System.Nullable<int> Original_PersonID, string Original_Report) {
+            return this.Update(PersonID, Report, Original_ReportId, Original_PersonID, Original_Report, Original_ReportId);
         }
     }
     
@@ -1057,7 +1055,7 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         
         private UpdateOrderOption _updateOrder;
         
-        private ErrorTableAdapter _errorTableAdapter;
+        private ReportTableAdapter _reportTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1079,12 +1077,12 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ErrorTableAdapter ErrorTableAdapter {
+        public ReportTableAdapter ReportTableAdapter {
             get {
-                return this._errorTableAdapter;
+                return this._reportTableAdapter;
             }
             set {
-                this._errorTableAdapter = value;
+                this._reportTableAdapter = value;
             }
         }
         
@@ -1107,9 +1105,9 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._errorTableAdapter != null) 
-                            && (this._errorTableAdapter.Connection != null))) {
-                    return this._errorTableAdapter.Connection;
+                if (((this._reportTableAdapter != null) 
+                            && (this._reportTableAdapter.Connection != null))) {
+                    return this._reportTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1124,7 +1122,7 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._errorTableAdapter != null)) {
+                if ((this._reportTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1136,14 +1134,14 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(NIBMDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ReportDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._errorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Error.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._reportTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Report.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._errorTableAdapter.Update(updatedRows));
+                    result = (result + this._reportTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1155,13 +1153,13 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(NIBMDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ReportDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._errorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Error.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._reportTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Report.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._errorTableAdapter.Update(addedRows));
+                    result = (result + this._reportTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1173,13 +1171,13 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(NIBMDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ReportDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._errorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Error.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._reportTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Report.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._errorTableAdapter.Update(deletedRows));
+                    result = (result + this._reportTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1215,15 +1213,15 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(NIBMDataSet dataSet) {
+        public virtual int UpdateAll(ReportDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._errorTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._errorTableAdapter.Connection) == false))) {
+            if (((this._reportTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._reportTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1259,13 +1257,13 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._errorTableAdapter != null)) {
-                    revertConnections.Add(this._errorTableAdapter, this._errorTableAdapter.Connection);
-                    this._errorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._errorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._errorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._errorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._errorTableAdapter.Adapter);
+                if ((this._reportTableAdapter != null)) {
+                    revertConnections.Add(this._reportTableAdapter, this._reportTableAdapter.Connection);
+                    this._reportTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._reportTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._reportTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._reportTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._reportTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1326,9 +1324,9 @@ SELECT ErrorId, Message, StringFormat FROM Error WHERE (ErrorId = @ErrorId)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._errorTableAdapter != null)) {
-                    this._errorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._errorTableAdapter]));
-                    this._errorTableAdapter.Transaction = null;
+                if ((this._reportTableAdapter != null)) {
+                    this._reportTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._reportTableAdapter]));
+                    this._reportTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
