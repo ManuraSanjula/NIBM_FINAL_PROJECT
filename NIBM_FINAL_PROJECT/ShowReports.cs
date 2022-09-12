@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 
 namespace NIBM_FINAL_PROJECT
@@ -19,8 +13,13 @@ namespace NIBM_FINAL_PROJECT
 
         private void ShowReports_Load(object sender, EventArgs e)
         {
-            this.reportTableAdapter1.Fill(this.reportDataSet.Report);
+            // TODO: This line of code loads data into the 'static_reports.Report' table. You can move, or remove it, as needed.
+            this.reportTableAdapter.Fill(this.static_reports.Report);
             this.reportViewer1.RefreshReport();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -31,45 +31,38 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.reportDataSet = new NIBM_FINAL_PROJECT.ReportDataSet();
-            this.reportDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.reportTableAdapter1 = new NIBM_FINAL_PROJECT.ReportDataSetTableAdapters.ReportTableAdapter();
-            this.ReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReportBindingSource)).BeginInit();
+            this.static_reports = new NIBM_FINAL_PROJECT.Static_reports();
+            this.reportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportTableAdapter = new NIBM_FINAL_PROJECT.Static_reportsTableAdapters.ReportTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.static_reports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.reportDataSetBindingSource;
+            reportDataSource1.Name = "StaticReports";
+            reportDataSource1.Value = this.reportBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "NIBM_FINAL_PROJECT.Static_Report_2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 7);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "NIBM_FINAL_PROJECT.StaticReports.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(34, 33);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1026, 607);
+            this.reportViewer1.Size = new System.Drawing.Size(982, 563);
             this.reportViewer1.TabIndex = 0;
             // 
-            // reportDataSet
+            // static_reports
             // 
-            this.reportDataSet.DataSetName = "ReportDataSet";
-            this.reportDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.static_reports.DataSetName = "Static_reports";
+            this.static_reports.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportDataSetBindingSource
+            // reportBindingSource
             // 
-            this.reportDataSetBindingSource.DataSource = this.reportDataSet;
-            this.reportDataSetBindingSource.Position = 0;
+            this.reportBindingSource.DataMember = "Report";
+            this.reportBindingSource.DataSource = this.static_reports;
             // 
-            // reportTableAdapter1
+            // reportTableAdapter
             // 
-            this.reportTableAdapter1.ClearBeforeFill = true;
-            // 
-            // ReportBindingSource
-            // 
-            this.ReportBindingSource.DataMember = "Report";
-            this.ReportBindingSource.DataSource = this.reportDataSet;
+            this.reportTableAdapter.ClearBeforeFill = true;
             // 
             // ShowReports
             // 
@@ -81,9 +74,8 @@
             this.Name = "ShowReports";
             this.Text = "ShowReports";
             this.Load += new System.EventHandler(this.ShowReports_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.reportDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reportDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.static_reports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reportBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -91,9 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private System.Windows.Forms.BindingSource reportDataSetBindingSource;
-        private ReportDataSet reportDataSet;
-        private ReportDataSetTableAdapters.ReportTableAdapter reportTableAdapter1;
-        private System.Windows.Forms.BindingSource ReportBindingSource;
+        private Static_reports static_reports;
+        private System.Windows.Forms.BindingSource reportBindingSource;
+        private Static_reportsTableAdapters.ReportTableAdapter reportTableAdapter;
     }
 }

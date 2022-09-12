@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.50333cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.50333cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.50333cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -267,9 +267,9 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>StaticReports</DataSetName>
         <Height>1.2cm</Height>
-        <Width>16.51cm</Width>
+        <Width>7.5cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -293,18 +293,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="ReportDataSet">
+    <DataSource Name="Static_reports">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3278638e-b846-4d33-b698-ef828f3e3590</rd:DataSourceID>
+      <rd:DataSourceID>d053609d-0ffe-4669-a634-14d3463f9e95</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="StaticReports">
       <Query>
-        <DataSourceName>ReportDataSet</DataSourceName>
+        <DataSourceName>Static_reports</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -322,8 +322,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>ReportDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Manura Sanjula\source\repos\NIBM_FINAL_PROJECT\NIBM_FINAL_PROJECT\ReportDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>Static_reports</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Manura Sanjula\source\repos\NIBM_FINAL_PROJECT\NIBM_FINAL_PROJECT\Static_reports.xsd</rd:SchemaPath>
         <rd:TableName>Report</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -332,5 +332,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>de176d70-7ce6-4c2e-9c83-81258de5c659</rd:ReportID>
+  <rd:ReportID>c9ef0101-3d0a-4143-9045-6cf4e94729be</rd:ReportID>
 </Report>

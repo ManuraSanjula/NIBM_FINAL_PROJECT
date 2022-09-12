@@ -151,6 +151,11 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Static_reports.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Static_reports.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateFoods.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,7 +211,7 @@
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaticReport.rdlc" />
+    <EmbeddedResource Include="StaticReports.rdlc" />
     <EmbeddedResource Include="Static_Report_2.rdlc" />
     <EmbeddedResource Include="UpdateFoods.resx">
       <DependentUpon>UpdateFoods.cs</DependentUpon>
@@ -234,6 +239,17 @@
     </None>
     <None Include="ReportDataSet.xss">
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Static_reports.xsc">
+      <DependentUpon>Static_reports.xsd</DependentUpon>
+    </None>
+    <None Include="Static_reports.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Static_reports.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Static_reports.xss">
+      <DependentUpon>Static_reports.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
